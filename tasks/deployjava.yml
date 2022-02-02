@@ -1,0 +1,9 @@
+--- 
+
+- name: "I want to deply java application"
+  get_url:
+    url: http://18.219.30.8:8082/artifactory/APPU/org/jacoco/org.jacoco.examples.maven.java/2.0-SNAPSHOT/org.jacoco.examples.maven.java-2.0-20220201.173341-1.jar
+    dest: /opt/tomcat/webapps/org.jacoco.examples.maven.java-2.0-20220201.173341-1.jar
+    url_username: admin 
+    url_password: Harshal@123
+    force_basic_auth: yes

@@ -1,0 +1,6 @@
+--- 
+
+- name: "I want to install jdk"
+  apt: 
+    name: default-jdk
+    state: present

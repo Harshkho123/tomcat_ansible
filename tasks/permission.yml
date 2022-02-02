@@ -1,0 +1,48 @@
+--- 
+- name: update permission 
+  file: 
+     path: /opt/tomcat 
+     recurse: yes
+     group: tomcat 
+     state: directory
+
+- name: Tomcat group read access 
+  file: 
+     path: /opt/tomcat/conf
+     recurse: yes  
+     mode: g+r 
+     state: directory 
+
+- name: Tomcat group write access 
+  file: 
+     path: /opt/tomcat/conf  
+     mode: g+x
+     state: directory 
+
+- name: the owner of the webapps
+  file: 
+     path: /opt/tomcat/webapps/ 
+     recurse: yes
+     owner: tomcat 
+     state: directory 
+
+- name: the owner of the work
+  file: 
+     path: /opt/tomcat/work/ 
+     recurse: yes
+     owner: tomcat 
+     state: directory 
+
+- name: the owner of the temp
+  file: 
+     path: /opt/tomcat/temp/ 
+     recurse: yes
+     owner: tomcat 
+     state: directory 
+
+- name: the owner of the logs
+  file: 
+     path: /opt/tomcat/logs/ 
+     recurse: yes
+     owner: tomcat 
+     state: directory 

@@ -1,0 +1,16 @@
+--- 
+
+- name: "manager web app that comes with Tomcat"
+  template: 
+    src: template/jaimat.j2
+    dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name: "manager web app that comes with Tomcat1"
+  template: 
+    src: template/manage1.j2
+    dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+
+- name: "manager web app that comes with Tomcat2"
+  template: 
+    src: template/hostmanage1.j2
+    dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
